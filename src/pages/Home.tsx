@@ -5,7 +5,7 @@ import { Button, SectionTitle, Badge } from '../components/UI';
 import { COURSES, TESTIMONIALS } from '../constants';
 import { motion } from 'framer-motion';
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
@@ -189,3 +189,5 @@ export const Home: React.FC = () => {
     </>
   );
 };
+
+export default Home;

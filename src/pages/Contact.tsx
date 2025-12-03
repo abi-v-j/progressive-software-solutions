@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Button, Input, TextArea, SectionTitle } from '../components/UI';
 
-export const Contact: React.FC = () => {
+const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -154,3 +154,5 @@ export const Contact: React.FC = () => {
     </div>
   );
 };
+
+export default Contact;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionTitle } from '../components/UI';
 
-export const TermsOfService: React.FC = () => {
+const TermsOfService: React.FC = () => {
   return (
     <div className="pt-24 pb-20 min-h-screen bg-white">
       {/* Header */}
@@ -116,3 +116,5 @@ export const TermsOfService: React.FC = () => {
     </div>
   );
 };
+
+export default TermsOfService;

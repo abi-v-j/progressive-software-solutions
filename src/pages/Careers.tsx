@@ -2,7 +2,7 @@ import React from 'react';
 import { Upload, Briefcase } from 'lucide-react';
 import { Button, Input, TextArea, SectionTitle } from '../components/UI';
 
-export const Careers: React.FC = () => {
+const Careers: React.FC = () => {
   return (
     <div className="pt-24 pb-20 min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,3 +69,5 @@ export const Careers: React.FC = () => {
     </div>
   );
 };
+
+export default Careers;

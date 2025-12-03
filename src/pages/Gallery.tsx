@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SectionTitle } from '../components/UI';
 import { GALLERY_ITEMS } from '../constants';
 
-export const Gallery: React.FC = () => {
+const Gallery: React.FC = () => {
   const [filter, setFilter] = useState<'All' | 'Event' | 'Training' | 'Students'>('All');
 
   const filteredItems = filter === 'All' 
@@ -54,3 +54,5 @@ export const Gallery: React.FC = () => {
     </div>
   );
 };
+
+export default Gallery;

@@ -4,7 +4,7 @@ import { Clock, BarChart, CheckCircle, BookOpen, ChevronLeft } from 'lucide-reac
 import { Button, Badge } from '../components/UI';
 import { COURSES } from '../constants';
 
-export const CourseDetail: React.FC = () => {
+const CourseDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const course = COURSES.find(c => c.slug === slug);
 
@@ -125,3 +125,5 @@ export const CourseDetail: React.FC = () => {
     </div>
   );
 };
+
+export default CourseDetail;

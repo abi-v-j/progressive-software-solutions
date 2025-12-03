@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionTitle } from '../components/UI';
 
-export const Privacy: React.FC = () => {
+const Privacy: React.FC = () => {
   return (
     <div className="pt-24 pb-20 min-h-screen bg-white">
       {/* Header */}
@@ -122,3 +122,5 @@ export const Privacy: React.FC = () => {
     </div>
   );
 };
+
+export default Privacy;

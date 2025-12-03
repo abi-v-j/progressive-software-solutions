@@ -2,7 +2,7 @@ import React from 'react';
 import { SectionTitle } from '../components/UI';
 import { CheckCircle } from 'lucide-react';
 
-export const About: React.FC = () => {
+const About: React.FC = () => {
   return (
     <div className="pt-24 pb-20 min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
@@ -63,3 +63,5 @@ export const About: React.FC = () => {
     </div>
   );
 };
+
+export default About;

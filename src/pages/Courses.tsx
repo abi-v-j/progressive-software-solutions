@@ -5,7 +5,7 @@ import { Button, Badge, SectionTitle, Input } from '../components/UI';
 import { COURSES } from '../constants';
 import { CourseLevel } from '../types';
 
-export const Courses: React.FC = () => {
+const Courses: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedLevel, setSelectedLevel] = useState<string>('All');
@@ -117,3 +117,5 @@ export const Courses: React.FC = () => {
     </div>
   );
 };
+
+export default Courses;

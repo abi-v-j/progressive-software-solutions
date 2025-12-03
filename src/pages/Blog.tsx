@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SectionTitle } from '../components/UI';
 import { BLOG_POSTS } from '../constants';
 
-export const Blog: React.FC = () => {
+const Blog: React.FC = () => {
   return (
     <div className="pt-24 pb-20 min-h-screen bg-neutralLight">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,3 +43,5 @@ export const Blog: React.FC = () => {
     </div>
   );
 };
+
+export default Blog;

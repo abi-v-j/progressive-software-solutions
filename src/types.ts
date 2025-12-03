@@ -1,7 +1,21 @@
-// src/routes/types.ts
-import { RouteObject } from 'react-router-dom';
+import type { ReactElement } from 'react';
+import type { RouteObject } from 'react-router-dom';
 
-export type AppRoute = RouteObject;
+/**
+ * ✅ Extended router type for your app
+ * - Keeps v7 compatibility
+ * - Adds security & SEO metadata
+ * - Keeps strong typing for element
+ */
+export interface AppRoute extends Omit<RouteObject, 'element' | 'children'> {
+  path: string;
+  element: ReactElement;
+  children?: AppRoute[];
+  requiresAuth?: boolean;
+  title?: string;        // SEO
+  description?: string; // SEO
+}
+
 
 export interface Module {
   title: string;

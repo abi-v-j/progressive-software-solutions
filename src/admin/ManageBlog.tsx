@@ -1,6 +1,7 @@
 import React from 'react';
-export const ManageBlog: React.FC = () => {
-    return (
-        <div></div>
-    )
-}
+
+const ManageBlog: React.FC = () => {
+  return <div></div>;
+};
+
+export default ManageBlog;
