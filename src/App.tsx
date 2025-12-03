@@ -11,7 +11,6 @@ import { globalRoutes } from './routes/globalRoutes';
 import { PublicLayout } from './layouts/PublicLayout';
 import { AdminLayout } from './layouts/AdminLayout';
 import { AuthLayout } from './layouts/AuthLayout';
-import { hasValidSession } from './auth/session';
 
 const router = createHashRouter([
   {
@@ -31,7 +30,6 @@ const router = createHashRouter([
 
 const App = () => {
     sessionStorage.setItem('admin_session', 'active');
-      console.log(hasValidSession());
 
 
   return (

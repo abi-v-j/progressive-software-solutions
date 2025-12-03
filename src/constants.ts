@@ -7,6 +7,7 @@ export const NAV_LINKS = [
   { label: 'Gallery', path: '/gallery' },
   { label: 'Careers', path: '/careers' },
   { label: 'Contact', path: '/contact' },
+  { label: 'Dashbord', path: '/admin/dashboard' },
 ];
 
 export const COURSES: Course[] = [
