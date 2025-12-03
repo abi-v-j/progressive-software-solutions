@@ -1,3 +1,8 @@
+// src/routes/types.ts
+import { RouteObject } from 'react-router-dom';
+
+export type AppRoute = RouteObject;
+
 export interface Module {
   title: string;
   description: string;
@@ -52,3 +57,4 @@ export interface BlogPost {
   imageUrl: string;
   author: string;
 }
+

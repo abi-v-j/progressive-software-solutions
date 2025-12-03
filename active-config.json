@@ -1,0 +1,70 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "experimentalDecorators": true,
+        "useDefineForClassFields": false,
+        "module": "esnext",
+        "lib": [
+            "es2022",
+            "dom",
+            "dom.iterable"
+        ],
+        "skipLibCheck": true,
+        "types": [
+            "node",
+            "react",
+            "react-dom"
+        ],
+        "moduleResolution": "bundler",
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "allowJs": true,
+        "jsx": "react-jsx",
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+        },
+        "allowImportingTsExtensions": true,
+        "noEmit": true,
+        "allowSyntheticDefaultImports": true,
+        "resolvePackageJsonExports": true,
+        "resolvePackageJsonImports": true,
+        "resolveJsonModule": true,
+        "preserveConstEnums": true
+    },
+    "files": [
+        "./vite.config.ts",
+        "./src/App.tsx",
+        "./src/constants.ts",
+        "./src/index.tsx",
+        "./src/types.ts",
+        "./src/admin/Applications.tsx",
+        "./src/admin/Dashboard.tsx",
+        "./src/admin/Login.tsx",
+        "./src/admin/ManageBlog.tsx",
+        "./src/admin/ManageCourses.tsx",
+        "./src/components/Footer.tsx",
+        "./src/components/Header.tsx",
+        "./src/components/UI.tsx",
+        "./src/layouts/AdminLayout.tsx",
+        "./src/layouts/PublicLayout.tsx",
+        "./src/pages/About.tsx",
+        "./src/pages/Blog.tsx",
+        "./src/pages/Careers.tsx",
+        "./src/pages/Contact.tsx",
+        "./src/pages/CourseDetail.tsx",
+        "./src/pages/Courses.tsx",
+        "./src/pages/Gallery.tsx",
+        "./src/pages/Home.tsx",
+        "./src/pages/Privacy.tsx",
+        "./src/pages/TermsofService.tsx",
+        "./src/routes/adminRoutes.tsx",
+        "./src/routes/globalRoutes.tsx",
+        "./src/routes/userRoutes.tsx",
+        "./src/services/api.ts",
+        "./src/services/auth.ts",
+        "./src/services/blog.ts",
+        "./src/services/courses.ts"
+    ]
+}
