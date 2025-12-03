@@ -29,6 +29,8 @@ const router = createHashRouter([
 ]);
 
 const App = () => {
+    sessionStorage.setItem('admin_session', 'active');
+
   return (
     <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
       <RouterProvider router={router} />
