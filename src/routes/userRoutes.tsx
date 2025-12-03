@@ -11,7 +11,7 @@ const Careers = lazy(() => import('../pages/Careers'));
 const Blog = lazy(() => import('../pages/Blog'));
 const Contact = lazy(() => import('../pages/Contact'));
 const Privacy = lazy(() => import('../pages/Privacy'));
-const TermsOfService = lazy(() => import('../pages/TermsOfService'));
+const TermsOfService = lazy(() => import('../pages/TermsofService'));
 
 export const userRoutes: AppRoute[] = [
   { path: '/', element: <Home /> },
