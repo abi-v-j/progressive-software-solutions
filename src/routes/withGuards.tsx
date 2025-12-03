@@ -12,8 +12,17 @@ export const withGuards = (routes: AppRoute[]): RouteObject[] => {
         : <Navigate to="/admin" replace />
       : route.element;
 
+    // ✅ INDEX ROUTE — NO PATH, NO CHILDREN (V7 RULE)
+    if (route.index === true) {
+      return {
+        index: true,
+        element: guardedElement,
+      };
+    }
+
+    // ✅ NORMAL ROUTE — PATH ALLOWED, CHILDREN ALLOWED
     return {
-      ...route,
+      path: route.path,
       element: guardedElement,
       children: route.children?.map(applyGuards),
     };
