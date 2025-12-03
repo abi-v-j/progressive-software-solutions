@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
           <p>&copy; {new Date().getFullYear()} Progressive Software Solutions. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white">Terms of Service</Link>
+            <Link to="/termsofservice" className="hover:text-white">Terms of Service</Link>
           </div>
         </div>
       </div>

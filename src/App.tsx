@@ -10,6 +10,8 @@ import { Contact } from './pages/Contact';
 import { About } from './pages/About';
 import { Blog } from './pages/Blog';
 import { Careers } from './pages/Careers';
+import { Privacy } from './pages/Privacy';
+import { TermsOfService } from './pages/TermsofService';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -36,8 +38,8 @@ const App: React.FC = () => {
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<div className="pt-32 text-center">Privacy Policy Placeholder</div>} />
-            <Route path="/terms" element={<div className="pt-32 text-center">Terms of Service Placeholder</div>} />
+            <Route path="/privacy" element={<Privacy/>} />
+            <Route path="/termsofservice" element={<TermsOfService/>} />
           </Routes>
         </main>
         <Footer />
