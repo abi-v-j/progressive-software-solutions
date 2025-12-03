@@ -5,6 +5,8 @@ import type { AppRoute } from '../types';
 import { hasValidSession } from '../auth/session';
 
 export const withGuards = (routes: AppRoute[]): RouteObject[] => {
+  console.log(hasValidSession());
+  
   const applyGuards = (route: AppRoute): RouteObject => {
     const guardedElement = route.requiresAuth
       ? hasValidSession()
