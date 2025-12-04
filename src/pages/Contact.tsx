@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
         {/* Map Embed Placeholder */}
         <div className="mt-12 bg-gray-200 h-96 rounded-xl overflow-hidden shadow-md">
            <iframe 
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.628236516053!2d-122.08374688469227!3d37.42199997982517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614194000000!5m2!1sen!2sus" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.4580324174353!2d76.58469467438823!3d9.97897117339756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07dd63da369c71%3A0x5e6a34523b192d67!2sProgressive%20Software%20Solutions%20And%20Training!5e0!3m2!1sen!2sin!4v1764864319449!5m2!1sen!2sin"
              width="100%" 
              height="100%" 
              style={{border:0}} 
