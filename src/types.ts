@@ -72,3 +72,20 @@ export interface BlogPost {
   author: string;
 }
 
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  role: 'Admin' | 'User';
+  status: 'Active' | 'Blocked';
+};
+
+export type BlogStatus = 'Draft' | 'Published';  // ✅ FIXED
+
+
+export interface AppSettings  {
+  siteName: string;
+  supportEmail: string;
+  maintenanceMode: boolean;
+  enableRegistrations: boolean;
+};
