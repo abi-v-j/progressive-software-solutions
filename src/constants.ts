@@ -15,6 +15,7 @@ export const NAV_LINKS = [
   { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' },
   { label: 'DashBoard', path: '/admin/dashboard' },
+  // { label: 'Login', path: '/admin' },
 ];
 
 
