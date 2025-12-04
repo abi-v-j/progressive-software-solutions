@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Clock, BarChart, CheckCircle, BookOpen, ChevronLeft } from 'lucide-react';
-import { Button, Badge } from '../components/UI';
+import { Button } from '../components/UI';
 import { COURSES } from '../constants';
 
 const CourseDetail: React.FC = () => {
@@ -10,69 +10,123 @@ const CourseDetail: React.FC = () => {
 
   if (!course) {
     return (
-      <div className="min-h-screen pt-32 flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold mb-4">Course not found</h1>
+      <div className="min-h-screen pt-24 flex flex-col items-center justify-center px-4">
+        <h1 className="text-xl font-bold mb-4">Course not found</h1>
         <Button asLink="/courses">Back to Courses</Button>
       </div>
     );
   }
 
   return (
-    <div className="pt-20 min-h-screen bg-neutralLight">
-      {/* Course Header */}
-      <div className="bg-neutralDark text-white py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/courses" className="inline-flex items-center text-gray-400 hover:text-white mb-6 transition-colors">
-            <ChevronLeft size={16} className="mr-1" /> Back to Courses
+    <div className="pt-16 sm:pt-20 min-h-screen bg-neutralLight">
+
+      {/* ================= HEADER ================= */}
+      <div className="bg-neutralDark text-white py-10 sm:py-14 lg:py-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+
+          <Link
+            to="/courses"
+            className="inline-flex items-center text-xs sm:text-sm text-gray-400 hover:text-white mb-5"
+          >
+            <ChevronLeft size={14} className="mr-1" /> Back to Courses
           </Link>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+            {/* Left */}
             <div>
-              <div className="flex gap-2 mb-4">
-                <span className="bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{course.category}</span>
-                <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{course.level}</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">{course.title}</h1>
-              <p className="text-xl text-gray-300 mb-8">{course.summary}</p>
-              
-              <div className="flex flex-wrap gap-6 text-sm font-medium text-gray-300 mb-8">
-                <div className="flex items-center"><Clock size={18} className="mr-2 text-accent"/> {course.duration}</div>
-                <div className="flex items-center"><BookOpen size={18} className="mr-2 text-accent"/> {course.modules.length} Modules</div>
-                <div className="flex items-center"><CheckCircle size={18} className="mr-2 text-accent"/> Live Projects</div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-accent text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase">
+                  {course.category}
+                </span>
+                <span className="bg-white/20 text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase">
+                  {course.level}
+                </span>
               </div>
 
-              <div className="flex gap-4">
-                <Button variant="danger" size="lg" asLink="/contact">Enroll Now</Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-brand">Download Brochure</Button>
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold mb-4 leading-tight">
+                {course.title}
+              </h1>
+
+              <p className="text-gray-300 text-sm sm:text-base lg:text-xl mb-6">
+                {course.summary}
+              </p>
+
+              <div className="flex flex-wrap gap-4 text-xs sm:text-sm text-gray-300 mb-6">
+                <span className="flex items-center gap-2">
+                  <Clock size={16} className="text-accent" />
+                  {course.duration}
+                </span>
+                <span className="flex items-center gap-2">
+                  <BookOpen size={16} className="text-accent" />
+                  {course.modules.length} Modules
+                </span>
+                <span className="flex items-center gap-2">
+                  <CheckCircle size={16} className="text-accent" />
+                  Live Projects
+                </span>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button variant="danger" size="md" asLink="/contact" className="w-full sm:w-auto">
+                  Enroll Now
+                </Button>
+                <Button
+                  variant="outline"
+                  size="md"
+                  className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-brand"
+                >
+                  Download Brochure
+                </Button>
               </div>
             </div>
-            <div className="hidden md:block">
-              <img src={course.imageUrl} alt={course.title} className="rounded-xl shadow-2xl border-4 border-white/10" />
+
+            {/* Right Image */}
+            <div className="relative w-full max-w-md lg:max-w-none mx-auto">
+              <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden rounded-xl shadow-2xl border-4 border-white/10">
+                <img
+                  src={course.imageUrl}
+                  alt={course.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
+
           </div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-3 gap-12">
-          
-          {/* Left Column: Details */}
-          <div className="lg:col-span-2 space-y-12">
-            
+      {/* ================= MAIN CONTENT ================= */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+
+          {/* LEFT CONTENT */}
+          <div className="lg:col-span-2 space-y-8">
+
             {/* Overview */}
-            <section className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <h2 className="text-2xl font-bold text-neutralDark mb-4">Course Overview</h2>
-              <p className="text-gray-600 leading-relaxed">{course.description}</p>
+            <section className="bg-white p-5 sm:p-8 rounded-xl shadow-sm border">
+              <h2 className="text-lg sm:text-2xl font-bold mb-3">
+                Course Overview
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                {course.description}
+              </p>
             </section>
 
-            {/* What you'll learn */}
-            <section className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <h2 className="text-2xl font-bold text-neutralDark mb-6">What You Will Learn</h2>
-              <div className="grid sm:grid-cols-2 gap-4">
+            {/* Outcomes */}
+            <section className="bg-white p-5 sm:p-8 rounded-xl shadow-sm border">
+              <h2 className="text-lg sm:text-2xl font-bold mb-5">
+                What You Will Learn
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {course.outcomes.map((outcome, idx) => (
-                  <div key={idx} className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-3 flex-shrink-0 mt-0.5" size={20} />
-                    <span className="text-gray-700">{outcome}</span>
+                  <div key={idx} className="flex items-start gap-3">
+                    <CheckCircle size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-700 text-sm sm:text-base">
+                      {outcome}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -80,45 +134,66 @@ const CourseDetail: React.FC = () => {
 
             {/* Syllabus */}
             <section>
-              <h2 className="text-2xl font-bold text-neutralDark mb-6">Curriculum</h2>
-              <div className="space-y-4">
+              <h2 className="text-lg sm:text-2xl font-bold mb-4">
+                Curriculum
+              </h2>
+
+              <div className="space-y-3">
                 {course.modules.map((module, idx) => (
-                  <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                    <div className="p-5 flex justify-between items-center bg-gray-50">
-                      <h3 className="font-bold text-lg text-neutralDark">Module {idx + 1}: {module.title}</h3>
+                  <div key={idx} className="bg-white border rounded-lg overflow-hidden">
+                    <div className="p-4 bg-gray-50 font-semibold text-sm sm:text-base">
+                      Module {idx + 1}: {module.title}
                     </div>
-                    <div className="p-5 text-gray-600 border-t border-gray-100">
+                    <div className="p-4 text-gray-600 text-sm sm:text-base border-t">
                       {module.description}
                     </div>
                   </div>
                 ))}
               </div>
             </section>
-
           </div>
 
-          {/* Right Column: Sticky Sidebar */}
-          <div className="lg:col-span-1">
-             <div className="sticky top-28 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                <h3 className="text-xl font-bold text-neutralDark mb-6">Course Highlights</h3>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center text-gray-600">
-                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 text-brand"><Clock size={16}/></div>
-                    <span>{course.duration} Duration</span>
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 text-brand"><BarChart size={16}/></div>
-                    <span>{course.level} Level</span>
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 text-brand"><CheckCircle size={16}/></div>
-                    <span>Placement Support</span>
-                  </li>
-                </ul>
-                <Button variant="primary" className="w-full mb-3" asLink="/contact">Apply for Admission</Button>
-                <p className="text-xs text-center text-gray-500">Limited seats available for next batch.</p>
-             </div>
-          </div>
+          {/* RIGHT SIDEBAR */}
+          <aside className="lg:col-span-1">
+            <div className="lg:sticky lg:top-24 bg-white p-5 sm:p-6 rounded-xl shadow-lg border">
+
+              <h3 className="text-lg sm:text-xl font-bold mb-5">
+                Course Highlights
+              </h3>
+
+              <ul className="space-y-4 mb-6 text-sm">
+                <li className="flex items-center gap-3 text-gray-600">
+                  <span className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-brand">
+                    <Clock size={15} />
+                  </span>
+                  {course.duration} Duration
+                </li>
+
+                <li className="flex items-center gap-3 text-gray-600">
+                  <span className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-brand">
+                    <BarChart size={15} />
+                  </span>
+                  {course.level} Level
+                </li>
+
+                <li className="flex items-center gap-3 text-gray-600">
+                  <span className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-brand">
+                    <CheckCircle size={15} />
+                  </span>
+                  Placement Support
+                </li>
+              </ul>
+
+              <Button variant="primary" className="w-full mb-3" asLink="/contact">
+                Apply for Admission
+              </Button>
+
+              <p className="text-[11px] text-center text-gray-500">
+                Limited seats available for next batch.
+              </p>
+
+            </div>
+          </aside>
 
         </div>
       </div>

@@ -1,10 +1,10 @@
-// src/routes/userRoutes.tsx
 import { lazy } from 'react';
 import { AppRoute } from '../types';
 
+// Core Pages
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
-const Courses = lazy(() => import('../pages/Courses'));
+const AllCourses = lazy(() => import('../pages/AllCourses'));
 const CourseDetail = lazy(() => import('../pages/CourseDetail'));
 const Gallery = lazy(() => import('../pages/Gallery'));
 const Careers = lazy(() => import('../pages/Careers'));
@@ -13,15 +13,29 @@ const Contact = lazy(() => import('../pages/Contact'));
 const Privacy = lazy(() => import('../pages/Privacy'));
 const TermsOfService = lazy(() => import('../pages/TermsofService'));
 
+// ✅ Newly Added UI-Only Pages
+const Testimonials = lazy(() => import('../pages/Testimonials'));
+const Reviews = lazy(() => import('../pages/Reviews'));
+const Posters = lazy(() => import('../pages/Posters'));
+
 export const userRoutes: AppRoute[] = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
-  { path: '/courses', element: <Courses /> },
+
+  { path: '/courses', element: <AllCourses /> },
   { path: '/courses/:slug', element: <CourseDetail /> },
+
   { path: '/gallery', element: <Gallery /> },
   { path: '/careers', element: <Careers /> },
   { path: '/blog', element: <Blog /> },
   { path: '/contact', element: <Contact /> },
+
+  // ✅ New Marketing / Trust Pages
+  { path: '/testimonials', element: <Testimonials /> },
+  { path: '/reviews', element: <Reviews /> },
+  { path: '/posters', element: <Posters /> },
+
+  // Legal
   { path: '/privacy', element: <Privacy /> },
   { path: '/termsofservice', element: <TermsOfService /> },
 ];

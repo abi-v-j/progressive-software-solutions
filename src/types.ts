@@ -28,23 +28,30 @@ export enum CourseLevel {
   Intermediate = "Intermediate",
   Advanced = "Advanced"
 }
-
 export interface Course {
   id: string;
   slug: string;
   title: string;
-  summary: string;
+
+  summary: string;        // ✅ ADD THIS
   description: string;
+
   category: string;
   duration: string;
   level: CourseLevel;
-  price?: string;
+
   imageUrl: string;
-  modules: Module[];
-  outcomes: string[];
+
   isLiveProject: boolean;
   hasCertification: boolean;
+
+  outcomes: string[];
+  modules: {
+    title: string;
+    description: string;
+  }[];
 }
+
 
 export interface Testimonial {
   id: string;
@@ -88,4 +95,11 @@ export interface AppSettings  {
   supportEmail: string;
   maintenanceMode: boolean;
   enableRegistrations: boolean;
+};
+
+
+export interface Poster  {
+  id: string;
+  title: string;
+  imageUrl: string;
 };

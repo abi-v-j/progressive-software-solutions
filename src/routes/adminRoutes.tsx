@@ -9,6 +9,12 @@ const Reports = lazy(() => import('../admin/Reports'));
 const Settings = lazy(() => import('../admin/Settings'));
 const ManageBlog = lazy(() => import('../admin/ManageBlog'));
 const ManageCourses = lazy(() => import('../admin/ManageCourses'));
+const ManageGallery = lazy(() => import('../admin/ManageGallery'));
+const ManagePosters = lazy(() => import('../admin/ManagePosters'));
+const ManageReviews = lazy(() => import('../admin/ManageReviews'));
+  const ManageTestimonials = lazy(() => import('../admin/ManageTestimonials'));
+
+
 
 export const adminRoutes: AppRoute[] = [
   { path: '/admin/dashboard', element: <Dashboard />, requiresAuth: true },
@@ -20,4 +26,12 @@ export const adminRoutes: AppRoute[] = [
   // Content Management
   { path: '/admin/blog', element: <ManageBlog />, requiresAuth: true },
   { path: '/admin/courses', element: <ManageCourses />, requiresAuth: true },
+  { path: '/admin/gallery', element: <ManageGallery />, requiresAuth: true },
+  { path: '/admin/posters', element: <ManagePosters />, requiresAuth: true },
+  { path: '/admin/reviews', element: <ManageReviews />, requiresAuth: true },
+
+{ path: '/admin/testimonials', element: <ManageTestimonials />, requiresAuth: true }
+
+
+
 ];

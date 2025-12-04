@@ -4,11 +4,19 @@ export const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Courses', path: '/courses' },
+
+  // ✅ Grouped trust/marketing pages
   { label: 'Gallery', path: '/gallery' },
+  { label: 'Testimonials', path: '/testimonials' },
+  { label: 'Reviews', path: '/reviews' },
+  { label: 'Posters', path: '/posters' },
+
   { label: 'Careers', path: '/careers' },
+  { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' },
-  { label: 'Dashbord', path: '/admin/dashboard' },
+  { label: 'DashBoard', path: '/admin/dashboard' },
 ];
+
 
 export const COURSES: Course[] = [
   {
@@ -155,4 +163,18 @@ export const BLOG_POSTS: BlogPost[] = [
     imageUrl: 'https://picsum.photos/800/400?random=32',
     author: 'Mike Johnson'
   }
+];
+
+
+export const POSTERS = Array.from({ length: 9 }).map((_, i) => ({
+  id: `${i}`,
+  title: `Promotional Poster ${i + 1}`,
+  imageUrl: `https://picsum.photos/800/1000?random=${23 + i}`
+}));
+
+
+export const REVIEWS = [
+  { id: '1', name: 'Rohit', rating: 5, comment: 'Excellent training and support.' },
+  { id: '2', name: 'Anita', rating: 4, comment: 'Good course content.' },
+  { id: '3', name: 'Vikram', rating: 5, comment: 'Highly recommend their full stack program.' }
 ];

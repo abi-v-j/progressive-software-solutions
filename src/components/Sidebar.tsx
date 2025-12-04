@@ -3,7 +3,10 @@ import {
   Home, Users, ShoppingBag, MessageSquare,
   BarChart3, FileText, Settings, Image,
   BookOpen, Layers,
-  ChevronLeft, ChevronRight, LogOut
+  ChevronLeft, ChevronRight, LogOut,
+  Camera,
+  Star,
+  Images
 } from "lucide-react";
 
 const Sidebar = ({ collapsed, setCollapsed }) => {
@@ -13,24 +16,36 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
     setCollapsed(next);
   };
 
+  
   const menu = [
-    // CORE
+    // ================= CORE =================
     { icon: Home, label: "Dashboard", path: "/admin/dashboard" },
     { icon: Users, label: "Users", path: "/admin/users" },
 
-    // ANALYTICS
+    // ================= ANALYTICS =================
     { icon: BarChart3, label: "Analytics", path: "/admin/analytics" },
     { icon: FileText, label: "Reports", path: "/admin/reports" },
 
-    // CONTENT MANAGEMENT
-    { icon: BookOpen, label: "Manage Blog", path: "/admin/blog" },
-    { icon: Layers, label: "Manage Courses", path: "/admin/courses" },
-    { icon: Image, label: "Gallery", path: "/admin/gallery" },
+    // ================= CONTENT =================
+    { icon: BookOpen, label: "Blogs", path: "/admin/blog" },
+    { icon: Layers, label: "Courses", path: "/admin/courses" },
+    { icon: Layers, label: "Course Details", path: "/admin/course-details" },
+    { icon: Images, label: "Course Images", path: "/admin/course-images" },
+    { icon: Layers, label: "Course Sections", path: "/admin/course-sections" },
 
-    // SYSTEM
+    // ================= MEDIA =================
+    { icon: Image, label: "Gallery", path: "/admin/gallery" },
+    { icon: Camera, label: "Training Gallery", path: "/admin/training-gallery" },
+    { icon: Image, label: "Event Gallery", path: "/admin/event-gallery" },
+    { icon: Image, label: "Posters", path: "/admin/posters" },
+
+    // ================= SOCIAL PROOF =================
+    { icon: MessageSquare, label: "Testimonials", path: "/admin/testimonials" },
+    { icon: Star, label: "Reviews", path: "/admin/reviews" },
+
+    // ================= SYSTEM =================
     { icon: Settings, label: "Settings", path: "/admin/settings" },
   ];
-
   return (
     <aside
       className={`hidden lg:flex h-screen flex-col transition-all duration-300
