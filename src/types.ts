@@ -1,21 +1,22 @@
 import type { ReactElement } from 'react';
 import type { RouteObject } from 'react-router-dom';
 
-/**
- * ✅ Extended router type for your app
- * - Keeps v7 compatibility
- * - Adds security & SEO metadata
- * - Keeps strong typing for element
- */
+/* ===========================
+   ✅ ROUTING TYPES
+=========================== */
+
 export interface AppRoute extends Omit<RouteObject, 'element' | 'children'> {
   path: string;
   element: ReactElement;
   children?: AppRoute[];
   requiresAuth?: boolean;
-  title?: string;        // SEO
-  description?: string; // SEO
+  title?: string;
+  description?: string;
 }
 
+/* ===========================
+   ✅ COURSE DOMAIN TYPES
+=========================== */
 
 export interface Module {
   title: string;
@@ -28,33 +29,48 @@ export enum CourseLevel {
   Intermediate = "Intermediate",
   Advanced = "Advanced"
 }
+
+export interface Certification {
+  name: string;
+  authority?: string;
+  isGovernment: boolean;
+}
+
 export interface Course {
-  id: string;
+  id: number;                 // ✅ MYSQL PRIMARY KEY
   slug: string;
   title: string;
 
-  summary: string;        // ✅ ADD THIS
+  summary: string;
   description: string;
 
   category: string;
   duration: string;
   level: CourseLevel;
 
-  imageUrl: string;
+  images: string[];
 
-  isLiveProject: boolean;
-  hasCertification: boolean;
+  certifications: Certification[];
 
   outcomes: string[];
-  modules: {
-    title: string;
-    description: string;
-  }[];
+
+  modules: Module[];
+
+  eligibleForPSC: boolean;
+  hasInternship: boolean;
+
+  targetAudience: string[];
+
+  createdAt?: string;
+  updatedAt?: string;
 }
 
+/* ===========================
+   ✅ OTHER DOMAIN TYPES
+=========================== */
 
 export interface Testimonial {
-  id: string;
+  id: number;
   name: string;
   role: string;
   company: string;
@@ -62,44 +78,48 @@ export interface Testimonial {
   photoUrl: string;
 }
 
+export type GalleryCategory = 'Event' | 'Training' | 'Students';
+
 export interface GalleryItem {
-  id: string;
+  id: number;
   title: string;
   imageUrl: string;
-  category: 'Event' | 'Training' | 'Students';
+  category: GalleryCategory;
 }
 
+export type BlogStatus = 'Draft' | 'Published';
+
 export interface BlogPost {
-  id: string;
+  id: number;
   slug: string;
   title: string;
   excerpt: string;
   date: string;
   imageUrl: string;
   author: string;
+  status: BlogStatus;
 }
+
+export type UserRole = 'Admin' | 'User';
+export type UserStatus = 'Active' | 'Blocked';
 
 export interface User {
   id: number;
   name: string;
   email: string;
-  role: 'Admin' | 'User';
-  status: 'Active' | 'Blocked';
-};
+  role: UserRole;
+  status: UserStatus;
+}
 
-export type BlogStatus = 'Draft' | 'Published';  // ✅ FIXED
-
-
-export interface AppSettings  {
+export interface AppSettings {
   siteName: string;
   supportEmail: string;
   maintenanceMode: boolean;
   enableRegistrations: boolean;
-};
+}
 
-
-export interface Poster  {
-  id: string;
+export interface Poster {
+  id: number;
   title: string;
   imageUrl: string;
-};
+}
