@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ✅ BASIC META -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progressive Software Solutions & Training</title>
+
+    <!-- ✅ PRIMARY SEO -->
+    <meta name="description" content="Industry-ready software training, internships, and enterprise IT solutions by Progressive Software Solutions & Training in Kerala." />
+    <link rel="canonical" href="https://yourdomain.com/" />
+
+    <!-- ✅ ROBOTS -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- ✅ OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Progressive Software Solutions & Training" />
+    <meta property="og:description" content="Enterprise-grade software training, academic projects, and internship programs." />
+    <meta property="og:image" content="https://yourdomain.com/og-home.jpg" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+
+    <!-- ✅ TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Progressive Software Solutions & Training" />
+    <meta name="twitter:description" content="Industry-ready software training, internships, and IT services." />
+    <meta name="twitter:image" content="https://yourdomain.com/og-home.jpg" />
+
+    <!-- ✅ FAVICON -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- ✅ PRECONNECT FOR PERFORMANCE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ✅ GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- ✅ TAILWIND (DEV ONLY — SHOULD BE REMOVED IN PROD BUILD) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ✅ TAILWIND THEME CONFIG -->
     <script>
       tailwind.config = {
         theme: {
@@ -33,43 +67,52 @@
         }
       }
     </script>
+
+    <!-- ✅ BASE STYLES -->
     <style>
       body {
         font-family: 'Inter', sans-serif;
         background-color: #F7FAFC;
         color: #0B223F;
       }
-      /* Custom scrollbar for better aesthetics */
+
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+        background: #f1f1f1;
       }
       ::-webkit-scrollbar-thumb {
-        background: #ccc; 
+        background: #ccc;
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #213F8A; 
+        background: #213F8A;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <!-- ✅ IMPORT MAP (REACT 19 SAFE) -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
+        }
+      }
+    </script>
+
+    <!-- ✅ APP CSS -->
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+
   <body>
     <div id="root"></div>
-  <script type="module" src="/src/index.tsx"></script>
-</body>
+
+    <!-- ✅ APP ENTRY -->
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
 </html>
