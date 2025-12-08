@@ -4,6 +4,7 @@ import { ArrowRight, Code, Terminal, Database, Users } from 'lucide-react';
 import { Button, SectionTitle, Badge } from '../components/UI';
 import { COURSES, TESTIMONIALS } from '../constants';
 import { motion } from 'framer-motion';
+import { SEO } from "../components/SEO";
 
 const Home: React.FC = () => {
   const heroImages = [
@@ -16,7 +17,7 @@ const Home: React.FC = () => {
 
 
 
-    
+
   ];
 
   const [activeHero, setActiveHero] = React.useState(0);
@@ -33,6 +34,13 @@ const Home: React.FC = () => {
 
   return (
     <>
+
+      <SEO
+        title="Progressive Software Solutions & Training | Software Courses & Internships"
+        description="Industry-ready software training, internships, and enterprise IT solutions."
+        canonical="https://yourdomain.com/"
+        ogImage="https://yourdomain.com/og-home.jpg"
+      />
       {/* Hero Section */}
       <section className="relative bg-neutralDark pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -50,10 +58,10 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-               Building Industry-Ready  <span className="text-accent">Software Professionals</span>
+                Building Industry-Ready  <span className="text-accent">Software Professionals</span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-lg">
-Progressive Software Solutions and Training is a technology-driven software development and professional training organization delivering enterprise-grade solutions, industry-aligned academic projects, and intensive internship programs built to match real-world production standards.
+                Progressive Software Solutions and Training is a technology-driven software development and professional training organization delivering enterprise-grade solutions, industry-aligned academic projects, and intensive internship programs built to match real-world production standards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="primary" size="lg" asLink="/courses">
@@ -101,7 +109,7 @@ Progressive Software Solutions and Training is a technology-driven software deve
                 />
 
 
-               
+
               </div>
 
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl flex items-center gap-3">

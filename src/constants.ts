@@ -82,7 +82,7 @@ export const COURSES: Course[] = [
     category: 'Software Development',
     duration: '6 Months',
     level: 'Advanced',
-   
+
     images: [
       'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80', // React/Code
       'https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=800&q=80', // Coding Setup
@@ -120,7 +120,7 @@ export const COURSES: Course[] = [
     category: 'Accounting',
     duration: '6 Months',
     level: 'Intermediate',
-   
+
     images: [
       'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80', // Financial Report
       'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80', // Office/Accountant
@@ -158,7 +158,7 @@ export const COURSES: Course[] = [
     category: 'Data Science',
     duration: '3 Months',
     level: 'Advanced',
-   
+
     images: [
       'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80', // AI Brain/Connections
       'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80', // Code on screen
@@ -196,7 +196,7 @@ export const COURSES: Course[] = [
     category: 'Government Certification',
     duration: '12 Months',
     level: 'Beginner',
-   
+
     images: [
       'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80', // Studying/Books
       'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80', // Classroom Lab
@@ -232,7 +232,7 @@ export const COURSES: Course[] = [
     category: 'Student Projects',
     duration: '1-3 Months',
     level: 'Intermediate',
-   
+
     images: [
       'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80', // Students talking
       'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=800&q=80', // Presentation
@@ -270,7 +270,7 @@ export const COURSES: Course[] = [
     category: 'Software Development',
     duration: '2 Months',
     level: 'Beginner',
-    
+
     images: [
       'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80', // Python Snake/Code Art
       'https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=800&q=80', // Developer typing
@@ -305,7 +305,7 @@ export const COURSES: Course[] = [
     category: 'Vocational Training',
     duration: '3 Months',
     level: 'Beginner',
-    
+
     images: [
       'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&w=800&q=80', // Typing/Keyboard
       'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80', // Person typing
@@ -340,7 +340,7 @@ export const COURSES: Course[] = [
     category: 'Accounting',
     duration: '3 Months',
     level: 'Beginner',
-   
+
     images: [
       'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80', // Accounting
       'https://images.unsplash.com/photo-1565514020176-6c2235c87445?auto=format&fit=crop&w=800&q=80', // Calculator
@@ -366,7 +366,7 @@ export const COURSES: Course[] = [
     eligibleForPSC: true,
     hasInternship: false
   },
-    
+
   // 9. Mobile App Development (Based on "Android/Flutter" posters)
   {
     id: 9,
@@ -448,33 +448,33 @@ export interface GalleryItem {
 }
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { 
-    id: 1, 
-    title: 'Code Hackathon 2024', 
-    category: 'Event', 
+  {
+    id: 1,
+    title: 'Code Hackathon 2024',
+    category: 'Event',
     // Hackathon/Coding Event
-    imageUrl: 'https://images.unsplash.com/photo-1504384308090-c54be38558bd?auto=format&fit=crop&w=800&q=80' 
+    imageUrl: 'https://images.unsplash.com/photo-1504384308090-c54be38558bd?auto=format&fit=crop&w=800&q=80'
   },
-  { 
-    id: 2, 
-    title: 'Advanced Computer Lab', 
-    category: 'Facility', 
+  {
+    id: 2,
+    title: 'Advanced Computer Lab',
+    category: 'Facility',
     // Modern Computer Lab
-    imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80' 
+    imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
   },
-  { 
-    id: 3, 
-    title: 'Convocation Ceremony', 
-    category: 'Event', 
+  {
+    id: 3,
+    title: 'Convocation Ceremony',
+    category: 'Event',
     // Graduation/Certificate
-    imageUrl: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80' 
+    imageUrl: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80'
   },
-  { 
-    id: 4, 
-    title: 'Cultural Fest (Onam)', 
-    category: 'Culture', 
+  {
+    id: 4,
+    title: 'Cultural Fest (Onam)',
+    category: 'Culture',
     // Cultural/Festival vibe
-    imageUrl: 'https://images.unsplash.com/photo-1582650742337-c7cf12e69312?auto=format&fit=crop&w=800&q=80' 
+    imageUrl: 'https://images.unsplash.com/photo-1582650742337-c7cf12e69312?auto=format&fit=crop&w=800&q=80'
   }
 ];
 
@@ -486,6 +486,7 @@ export interface BlogPost {
   id: number;
   slug: string;
   title: string;
+  date: string;
   excerpt: string;
   imageUrl: string;
   author: string;
@@ -499,7 +500,8 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'From AI-generated code to the rise of Web3, find out what skills you need to stay relevant in the tech industry.',
     // Futuristic Tech/Code
     imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
-    author: 'Sandeep K.'
+    author: 'Sandeep K.',
+    date: new Date('2024-05-10').toDateString()
   },
   {
     id: 2,
@@ -508,7 +510,8 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Essential tips and keyboard shortcuts to ace your upcoming Kerala PSC computer proficiency tests.',
     // Studying/Notes
     imageUrl: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
-    author: 'Admin'
+    author: 'Admin',
+    date: new Date('2024-04-22').toDateString()
   }
 ];
 
