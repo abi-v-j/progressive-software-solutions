@@ -11,7 +11,7 @@ const AllCourses: React.FC = () => {
   const [selectedLevel, setSelectedLevel] = useState<string>('All');
 
   const categories = ['All', ...Array.from(new Set(COURSES.map(c => c.category)))];
-  const levels = ['All', ...Object.values(CourseLevel)];
+  const levels = ['All', 'Beginner', 'Intermediate', 'Advanced'];
 
   const filteredCourses = COURSES.filter(course => {
     const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase());
@@ -85,10 +85,11 @@ const AllCourses: React.FC = () => {
                 {/* Image */}
                 <div className="relative h-44 sm:h-48 overflow-hidden">
                   <img
-                    src={course.imageUrl}
+                    src={course.images[0]}
                     alt={course.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
+
                   <div className="absolute top-3 right-3">
                     <Badge color="bg-white/90 text-neutralDark font-bold text-xs sm:text-sm">
                       {course.level}
@@ -102,11 +103,12 @@ const AllCourses: React.FC = () => {
                     <div className="text-[10px] sm:text-xs font-bold text-accent uppercase tracking-wide">
                       {course.category}
                     </div>
-                    {course.isLiveProject && (
+                    {course.hasInternship && (
                       <Badge color="bg-green-100 text-green-700 text-xs">
-                        Live Project
+                        Internship
                       </Badge>
                     )}
+
                   </div>
 
                   <h3 className="text-lg sm:text-xl font-bold text-neutralDark mb-2 line-clamp-2">
@@ -120,7 +122,7 @@ const AllCourses: React.FC = () => {
                   <div className="mt-auto pt-4 border-t border-gray-100">
                     <div className="flex justify-between items-center mb-4 text-xs sm:text-sm text-gray-500">
                       <span>{course.duration}</span>
-                      <span>{course.hasCertification ? 'Cert Included' : ''}</span>
+                      {course.certifications.length > 0 && <span>Cert Included</span>}
                     </div>
 
                     <Button

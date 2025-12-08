@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
-import { NAV_LINKS } from '../constants';
+import { HEADER_LINKS } from '../constants';
 import { Button } from './UI';
 
 // If you're not in Next.js, use a normal <img>
@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {NAV_LINKS.map((link) => (
+            {HEADER_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -89,7 +89,7 @@ export const Header: React.FC = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg absolute w-full left-0 top-full">
           <div className="px-4 py-3 space-y-1">
-            {NAV_LINKS.map((link) => (
+            {HEADER_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}

@@ -8,6 +8,8 @@ const CourseDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const course = COURSES.find(c => c.slug === slug);
 
+  const [activeImage, setActiveImage] = React.useState(0);
+
   if (!course) {
     return (
       <div className="min-h-screen pt-24 flex flex-col items-center justify-center px-4">
@@ -61,37 +63,76 @@ const CourseDetail: React.FC = () => {
                   <BookOpen size={16} className="text-accent" />
                   {course.modules.length} Modules
                 </span>
-                <span className="flex items-center gap-2">
-                  <CheckCircle size={16} className="text-accent" />
-                  Live Projects
-                </span>
+                {course.hasInternship && (
+                  <span className="flex items-center gap-2">
+                    <CheckCircle size={16} className="text-accent" />
+                    Internship Included
+                  </span>
+                )}
               </div>
 
-              {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="danger" size="md" asLink="/contact" className="w-full sm:w-auto">
                   Enroll Now
                 </Button>
-                <Button
-                  variant="outline"
-                  size="md"
-                  className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-brand"
-                >
-                  Download Brochure
-                </Button>
+               <Button
+  variant="outline"
+  size="md"
+  className="
+    w-full sm:w-auto
+    border-white/70 
+    !text-white
+    transition-all 
+    duration-300 
+    ease-out
+    hover:bg-white/10 
+    hover:border-white 
+    hover:!text-white
+  "
+>
+  Download Brochure
+</Button>
+
               </div>
             </div>
 
-            {/* Right Image */}
-            <div className="relative w-full max-w-md lg:max-w-none mx-auto">
-              <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden rounded-xl shadow-2xl border-4 border-white/10">
+            {/* ================= IMAGE GALLERY ================= */}
+            <div className="w-full max-w-md lg:max-w-none mx-auto space-y-4">
+
+              {/* MAIN IMAGE */}
+              <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden rounded-xl shadow-2xl border-4 border-white/10 bg-black">
                 <img
-                  src={course.imageUrl}
+                  src={course.images[activeImage]}
                   alt={course.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-all duration-300"
                   loading="lazy"
                 />
               </div>
+
+              {/* THUMBNAILS */}
+              {course.images.length > 1 && (
+                <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
+                  {course.images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveImage(idx)}
+                      className={`relative overflow-hidden rounded-lg border transition
+                        ${activeImage === idx
+                          ? 'border-brand ring-2 ring-brand'
+                          : 'border-gray-200 hover:border-brand'
+                        }`}
+                    >
+                      <img
+                        src={img}
+                        alt={`Preview ${idx + 1}`}
+                        className="w-full h-20 object-cover"
+                        loading="lazy"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+
             </div>
 
           </div>
@@ -180,7 +221,7 @@ const CourseDetail: React.FC = () => {
                   <span className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-brand">
                     <CheckCircle size={15} />
                   </span>
-                  Placement Support
+                  {course.hasInternship ? 'Placement Support' : 'No Placement Support'}
                 </li>
               </ul>
 
