@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, Layers } from 'lucide-react';
 import { Button, Badge, SectionTitle, Input } from '../components/UI';
 import { COURSES } from '../constants';
 import { CourseLevel } from '../types';
@@ -59,10 +59,13 @@ const AllCourses: React.FC = () => {
               </div>
 
               {/* Category */}
-              <div className="flex items-center gap-2">
-                <Filter className="text-gray-400 shrink-0" size={18} />
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                  <Filter size={18} />
+                </div>
+
                 <select
-                  className="w-full border border-gray-300 rounded-md py-2 px-3 focus:ring-brand focus:border-brand bg-white"
+                  className="w-full h-11 rounded-md border border-gray-300 pl-10 pr-3 text-sm bg-white focus:border-brand focus:ring-brand"
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                 >
@@ -73,10 +76,13 @@ const AllCourses: React.FC = () => {
               </div>
 
               {/* Level */}
-              <div className="flex items-center gap-2">
-                <span className="text-xs sm:text-sm text-gray-500 font-medium">Level:</span>
+              <div className="relative">
+                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                  <Layers size={18} />
+                </div>
+
                 <select
-                  className="w-full border border-gray-300 rounded-md py-2 px-3 focus:ring-brand focus:border-brand bg-white"
+                  className="w-full h-11 rounded-md border border-gray-300 pl-10 pr-3 text-sm bg-white focus:border-brand focus:ring-brand"
                   value={selectedLevel}
                   onChange={(e) => setSelectedLevel(e.target.value)}
                 >
@@ -85,6 +91,7 @@ const AllCourses: React.FC = () => {
                   ))}
                 </select>
               </div>
+
             </div>
           </div>
 

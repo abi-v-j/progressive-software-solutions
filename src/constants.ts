@@ -40,7 +40,7 @@ export const HEADER_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Courses', path: '/courses' },
-  { label: 'Gallery', path: '/gallery' },
+  // { label: 'Gallery', path: '/gallery' },
   { label: 'Careers', path: '/careers' },
   { label: 'Contact', path: '/contact' }
 ];
@@ -49,9 +49,9 @@ export const FOOTER_LINKS = {
   quickLinks: [
     { label: 'About Us', path: '/about' },
     { label: 'Courses', path: '/courses' },
-    { label: 'Gallery', path: '/gallery' },
+    // { label: 'Gallery', path: '/gallery' },
     { label: 'Careers', path: '/careers' },
-    { label: 'Blog', path: '/blog' },
+    // { label: 'Blog', path: '/blog' },
     { label: 'Contact', path: '/contact' }
   ],
   platform: [
@@ -60,7 +60,7 @@ export const FOOTER_LINKS = {
     { label: 'Posters', path: '/posters' }
   ],
   admin: [
-    { label: 'Admin Dashboard', path: '/admin/dashboard' }
+    // { label: 'Admin Dashboard', path: '/admin/dashboard' }
   ],
   legal: [
     { label: 'Privacy Policy', path: '/privacy' },

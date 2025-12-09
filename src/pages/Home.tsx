@@ -5,7 +5,7 @@ import { Button, SectionTitle, Badge } from '../components/UI';
 import { COURSES, TESTIMONIALS } from '../constants';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SEO } from "../components/SEO";
-import bg1 from '../assets/bg1.jpg';
+import bg1 from '../assets/bg.jpg';
 import bg2 from '../assets/bg2.jpg';
 import bg3 from '../assets/bg3.jpg';
 import bg4 from '../assets/bg4.jpg';
@@ -106,29 +106,29 @@ const Home: React.FC = () => {
                   e.currentTarget.style.setProperty("--ry", `0deg`);
                 }}
               >
-<AnimatePresence>
-                <motion.img
-  key={activeHero}
-  src={heroImages[activeHero]}
-  alt="Students Coding"
-  className="absolute inset-0 w-full h-full object-cover"
-  initial={{
-    opacity: 0,
-    scale: 1.05
-  }}
-  animate={{
-    opacity: 1,
-    scale: 1
-  }}
-  exit={{
-    opacity: 0,
-    scale: 0.98
-  }}
-  transition={{
-    duration: 0.6,
-    ease: "easeInOut"
-  }}
-/>
+                <AnimatePresence>
+                  <motion.img
+                    key={activeHero}
+                    src={heroImages[activeHero]}
+                    alt="Students Coding"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{
+                      opacity: 0,
+                      scale: 1.05
+                    }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1
+                    }}
+                    exit={{
+                      opacity: 0,
+                      scale: 0.98
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      ease: "easeInOut"
+                    }}
+                  />
 
                 </AnimatePresence>
 
@@ -145,15 +145,6 @@ const Home: React.FC = () => {
 
 
 
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl flex items-center gap-3">
-                <div className="bg-green-100 p-2 rounded-full text-green-600">
-                  <Users size={24} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 font-bold uppercase">Career Transformed</p>
-                  <p className="text-2xl font-bold text-neutralDark">1000+</p>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -263,7 +254,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white overflow-hidden">
+      {/* <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Student & Client Testimonials"
@@ -288,7 +279,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-brand text-white">
