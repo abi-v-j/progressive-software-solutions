@@ -16,11 +16,11 @@ export const Footer: React.FC = () => {
     <footer className="bg-neutralDark text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        {/* ✅ MAIN GRID — 3 COL, CENTERED */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center">
 
-          {/* Brand */}
-          <div>
+          {/* ✅ BRAND */}
+          <div className="flex flex-col items-center">
             <Link to="/" className="flex items-center gap-2 mb-6">
               <img
                 src="/logo.png"
@@ -31,12 +31,12 @@ export const Footer: React.FC = () => {
               />
             </Link>
 
-            <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+            <p className="text-gray-300 mb-6 text-sm leading-relaxed max-w-sm">
               Empowering the next generation of software engineers through
               hands-on training, expert mentorship, and real-world projects.
             </p>
 
-            <div className="flex space-x-4">
+            <div className="flex gap-5 justify-center">
               <a
                 href="https://www.facebook.com/share/1AYhyzaasZ/"
                 target="_blank"
@@ -47,21 +47,13 @@ export const Footer: React.FC = () => {
                 <Facebook size={20} />
               </a>
 
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white pointer-events-none opacity-50"
-                aria-label="Twitter (not configured)"
-              >
+              <span className="text-gray-600 cursor-not-allowed">
                 <Twitter size={20} />
-              </a>
+              </span>
 
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white pointer-events-none opacity-50"
-                aria-label="LinkedIn (not configured)"
-              >
+              <span className="text-gray-600 cursor-not-allowed">
                 <Linkedin size={20} />
-              </a>
+              </span>
 
               <a
                 href="https://www.instagram.com/progressivesoftwaresolution?igsh=MWVmMGpjNGF6Y2Ez"
@@ -73,18 +65,21 @@ export const Footer: React.FC = () => {
                 <Instagram size={20} />
               </a>
             </div>
-
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 border-b border-gray-700 pb-2 inline-block">
+          {/* ✅ QUICK LINKS */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-semibold mb-6 border-b border-gray-700 pb-2">
               Quick Links
             </h3>
+
             <ul className="space-y-3 text-gray-300 text-sm">
               {FOOTER_LINKS.quickLinks.map(link => (
                 <li key={link.path}>
-                  <Link to={link.path} className="hover:text-accent transition-colors">
+                  <Link
+                    to={link.path}
+                    className="hover:text-accent transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -92,44 +87,28 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Platform */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 border-b border-gray-700 pb-2 inline-block">
-              Platform
-            </h3>
-            <ul className="space-y-3 text-gray-300 text-sm">
-              {FOOTER_LINKS.platform.map(link => (
-                <li key={link.path}>
-                  <Link to={link.path} className="hover:text-accent transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 border-b border-gray-700 pb-2 inline-block">
+          {/* ✅ CONTACT */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-semibold mb-6 border-b border-gray-700 pb-2">
               Contact
             </h3>
 
             <ul className="space-y-4 text-gray-300 text-sm">
-              <li className="flex items-start">
-                <MapPin size={18} className="mr-3 text-accent mt-1" />
-                <span>
+              <li className="flex items-center gap-3 justify-center">
+                <MapPin size={18} className="text-accent" />
+                <span className="text-center">
                   2nd Floor, RVK Arcade,<br />
                   Muvattupuzha, Kerala
                 </span>
               </li>
 
-              <li className="flex items-center">
-                <Phone size={18} className="mr-3 text-accent" />
+              <li className="flex items-center gap-3 justify-center">
+                <Phone size={18} className="text-accent" />
                 <span>+91 9072 488 881</span>
               </li>
 
-              <li className="flex items-center">
-                <Mail size={18} className="mr-3 text-accent" />
+              <li className="flex items-center gap-3 justify-center">
+                <Mail size={18} className="text-accent" />
                 <span>progressiveofc@gmail.com</span>
               </li>
             </ul>
@@ -137,13 +116,13 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        {/* ✅ BOTTOM BAR — CENTERED */}
+        <div className="border-t border-gray-800 pt-8 flex flex-col items-center text-sm text-gray-400 gap-4 text-center">
           <p>
             © {new Date().getFullYear()} Progressive Software Solutions. All rights reserved.
           </p>
 
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex space-x-6">
             {FOOTER_LINKS.legal.map(link => (
               <Link
                 key={link.path}
