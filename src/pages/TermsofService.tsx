@@ -9,8 +9,8 @@ const TermsOfService: React.FC = () => {
       <SEO
         title="Terms & Conditions | Progressive Software Solutions & Training"
         description="Read the Terms and Conditions governing access to and use of the Progressive Software Solutions & Training website, services, and training programs."
-        canonical="https://yourdomain.com/terms"
-        ogImage="https://yourdomain.com/og-terms.jpg"
+        canonical="https://www.progressivesst.com/terms"
+        ogImage="https://www.progressivesst.com/og-terms.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-white">

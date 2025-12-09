@@ -17,8 +17,8 @@ const Careers: React.FC = () => {
       <SEO
         title="Careers at Progressive Software Solutions & Training | IT Instructor & Intern Jobs"
         description="Apply for instructor, mentor, and internship roles at Progressive Software Solutions & Training. Build careers in full stack development, Python, and software education."
-        canonical="https://yourdomain.com/careers"
-        ogImage="https://yourdomain.com/og-careers.jpg"
+        canonical="https://www.progressivesst.com/careers"
+        ogImage="https://www.progressivesst.com/og-careers.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-white">

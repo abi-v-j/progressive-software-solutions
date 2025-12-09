@@ -10,8 +10,8 @@ const Testimonials: React.FC = () => {
       <SEO
         title="Student Testimonials | Progressive Software Solutions & Training"
         description="Real student testimonials from Progressive Software Solutions & Training. Verified feedback on software training, internships, and placement support."
-        canonical="https://yourdomain.com/testimonials"
-        ogImage="https://yourdomain.com/og-testimonials.jpg"
+        canonical="https://www.progressivesst.com/testimonials"
+        ogImage="https://www.progressivesst.com/og-testimonials.jpg"
       />
 
       <div className="pt-24 pb-20 bg-neutralLight min-h-screen">

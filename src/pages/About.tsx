@@ -8,28 +8,28 @@ const About: React.FC = () => {
     <>
       {/* ✅ SEO META */}
       <SEO
-        title="About Progressive Software Solutions & Training | IT Training & Internships"
-        description="Learn about Progressive Software Solutions & Training, our mission, values, and commitment to industry-ready software education."
-        canonical="https://yourdomain.com/about"
-        ogImage="https://yourdomain.com/og-about.jpg"
+        title="About Progressive Software Solutions & Training | Software Training & IT Services Since 2006"
+        description="Progressive Software Solutions & Training is a global software training and development company established in 2006 with 30,000+ trained students and 50+ college partnerships."
+        canonical="https://www.progressivesst.com/about"
+        ogImage="https://www.progressivesst.com/og-about.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-          {/* ✅ SINGLE H1 — CORRECT */}
           <h1 className="text-4xl md:text-5xl font-bold text-neutralDark mb-6">
-            Empowering Future Tech Leaders
+            Building Industry-Ready Software Professionals Since 2006
           </h1>
 
           <p className="text-xl text-gray-600 leading-relaxed">
-            At Progressive Software Solutions, we bridge the gap between academic learning and industry requirements.
+            Progressive Software Solutions & Training is a globally recognized software
+            training and development organization focused on building real-world technical
+            skills, not academic theory.
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              {/* ✅ Image SEO FIXED */}
               <img 
                 src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                 alt="Progressive Software Solutions classroom training session"
@@ -39,44 +39,56 @@ const About: React.FC = () => {
             </div>
 
             <div>
-              {/* ✅ H2 UNDER H1 — CORRECT */}
               <h2 className="text-3xl font-bold text-neutralDark mb-6">
                 Our Mission
               </h2>
 
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Founded in 2015, our mission has been simple: to provide high-quality, affordable, and practical software training that results in employability. We believe that coding is a craft that is best learned by doing.
+                Our mission is to empower individuals and organizations through practical,
+                industry-aligned software education and cutting-edge technology solutions.
+                We focus on transforming students into deployable professionals capable
+                of working in real production environments.
               </p>
 
               <p className="text-gray-600 mb-8 leading-relaxed">
-                We have partnered with over 50+ tech companies to curate a curriculum that stays ahead of the curve, ensuring our students are learning tools that are actually used in production today.
+                Since 2006, we have trained over 30,000+ students and partnered with
+                50+ colleges to deliver hands-on software education in emerging and
+                enterprise-grade technologies.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-neutralLight p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-brand mb-1">500+</div>
-                  <div className="text-sm text-gray-600">Graduates</div>
+                  <div className="text-3xl font-bold text-brand mb-1">30,000+</div>
+                  <div className="text-sm text-gray-600">Trained Students</div>
                 </div>
 
                 <div className="bg-neutralLight p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-brand mb-1">95%</div>
-                  <div className="text-sm text-gray-600">Placement Rate</div>
+                  <div className="text-3xl font-bold text-brand mb-1">50+</div>
+                  <div className="text-sm text-gray-600">College Partnerships</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* ✅ H2 SECTION TITLE — GOOD */}
           <SectionTitle
             title="Our Core Values"
-            subtitle="The principles that guide every class we teach."
+            subtitle="The principles that define how we train and deliver software."
           />
 
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
-              { title: 'Practicality', desc: 'Theory is important, but code that runs is better. We focus on hands-on building.' },
-              { title: 'Community', desc: 'Learning is social. We foster a collaborative environment where students help each other.' },
-              { title: 'Excellence', desc: 'We do not settle for "good enough". We push our students to write clean, scalable code.' }
+              { 
+                title: 'Industry-First Training', 
+                desc: 'Our programs are designed around real development workflows, production tools, and live projects.' 
+              },
+              { 
+                title: 'Execution Over Theory', 
+                desc: 'We prioritize hands-on implementation, code quality, debugging, deployment, and system thinking.' 
+              },
+              { 
+                title: 'Career Accountability', 
+                desc: 'From resume building to interview preparation and internships, we take responsibility for student outcomes.' 
+              }
             ].map((val, idx) => (
               <div
                 key={idx}
@@ -86,7 +98,6 @@ const About: React.FC = () => {
                   <CheckCircle size={24} />
                 </div>
 
-                {/* ✅ H3 UNDER H2 — CORRECT */}
                 <h3 className="text-xl font-bold text-neutralDark mb-3">
                   {val.title}
                 </h3>

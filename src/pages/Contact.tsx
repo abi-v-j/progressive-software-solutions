@@ -57,8 +57,8 @@ const Contact: React.FC = () => {
       <SEO
         title="Contact Progressive Software Solutions & Training | IT Training & Career Guidance"
         description="Get in touch with Progressive Software Solutions & Training for software courses, internships, and career guidance. Located in Muvattupuzha, Kerala."
-        canonical="https://yourdomain.com/contact"
-        ogImage="https://yourdomain.com/og-contact.jpg"
+        canonical="https://www.progressivesst.com/contact"
+        ogImage="https://www.progressivesst.com/og-contact.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-neutralLight">
@@ -131,11 +131,13 @@ const Contact: React.FC = () => {
                     label="Phone Number"
                     id="phone"
                     type="tel"
-                    placeholder="+1 (555) 000-0000"
+                    pattern="[6-9]{1}[0-9]{9}"
+                    placeholder="+91 98765 43210"
                     required
                     value={formData.phone}
                     onChange={handleChange}
                   />
+
                 </div>
 
                 <Input
@@ -151,7 +153,7 @@ const Contact: React.FC = () => {
                 <Input
                   label="Subject"
                   id="subject"
-                  placeholder="Course Inquiry / Partnership"
+                  placeholder="Course Inquiry"
                   value={formData.subject}
                   onChange={handleChange}
                 />

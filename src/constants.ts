@@ -416,24 +416,24 @@ export interface Testimonial {
 }
 
 export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: 1,
-    name: 'Anjali Menon',
-    role: 'Frontend Developer',
-    company: 'Technopark',
-    quote: 'The Full Stack internship gave me the confidence to handle real client projects. The mentors are extremely supportive.',
-    // Professional Woman Portrait
-    photoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80'
-  },
-  {
-    id: 2,
-    name: 'Rahul Krishnan',
-    role: 'App Developer',
-    company: 'Freelance',
-    quote: 'I published my first app on the Play Store within 3 months of joining. The practical-oriented training is the best.',
-    // Professional Man Portrait
-    photoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80'
-  }
+  // {
+  //   id: 1,
+  //   name: 'Anjali Menon',
+  //   role: 'Frontend Developer',
+  //   company: 'Technopark',
+  //   quote: 'The Full Stack internship gave me the confidence to handle real client projects. The mentors are extremely supportive.',
+  //   // Professional Woman Portrait
+  //   photoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80'
+  // },
+  // {
+  //   id: 2,
+  //   name: 'Rahul Krishnan',
+  //   role: 'App Developer',
+  //   company: 'Freelance',
+  //   quote: 'I published my first app on the Play Store within 3 months of joining. The practical-oriented training is the best.',
+  //   // Professional Man Portrait
+  //   photoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80'
+  // }
 ];
 
 /* ===========================
@@ -448,34 +448,34 @@ export interface GalleryItem {
 }
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  {
-    id: 1,
-    title: 'Code Hackathon 2024',
-    category: 'Event',
-    // Hackathon/Coding Event
-    imageUrl: 'https://images.unsplash.com/photo-1504384308090-c54be38558bd?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 2,
-    title: 'Advanced Computer Lab',
-    category: 'Facility',
-    // Modern Computer Lab
-    imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 3,
-    title: 'Convocation Ceremony',
-    category: 'Event',
-    // Graduation/Certificate
-    imageUrl: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 4,
-    title: 'Cultural Fest (Onam)',
-    category: 'Culture',
-    // Cultural/Festival vibe
-    imageUrl: 'https://images.unsplash.com/photo-1582650742337-c7cf12e69312?auto=format&fit=crop&w=800&q=80'
-  }
+  // {
+  //   id: 1,
+  //   title: 'Code Hackathon 2024',
+  //   category: 'Event',
+  //   // Hackathon/Coding Event
+  //   imageUrl: 'https://images.unsplash.com/photo-1504384308090-c54be38558bd?auto=format&fit=crop&w=800&q=80'
+  // },
+  // {
+  //   id: 2,
+  //   title: 'Advanced Computer Lab',
+  //   category: 'Facility',
+  //   // Modern Computer Lab
+  //   imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Convocation Ceremony',
+  //   category: 'Event',
+  //   // Graduation/Certificate
+  //   imageUrl: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80'
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Cultural Fest (Onam)',
+  //   category: 'Culture',
+  //   // Cultural/Festival vibe
+  //   imageUrl: 'https://images.unsplash.com/photo-1582650742337-c7cf12e69312?auto=format&fit=crop&w=800&q=80'
+  // }
 ];
 
 /* ===========================
@@ -493,26 +493,26 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
-  {
-    id: 1,
-    slug: 'future-of-web-dev',
-    title: 'Top 5 Trends in Web Development for 2025',
-    excerpt: 'From AI-generated code to the rise of Web3, find out what skills you need to stay relevant in the tech industry.',
-    // Futuristic Tech/Code
-    imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
-    author: 'Sandeep K.',
-    date: new Date('2024-05-10').toDateString()
-  },
-  {
-    id: 2,
-    slug: 'psc-computer-tips',
-    title: 'How to Crack PSC Computer Assistant Exams',
-    excerpt: 'Essential tips and keyboard shortcuts to ace your upcoming Kerala PSC computer proficiency tests.',
-    // Studying/Notes
-    imageUrl: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
-    author: 'Admin',
-    date: new Date('2024-04-22').toDateString()
-  }
+  // {
+  //   id: 1,
+  //   slug: 'future-of-web-dev',
+  //   title: 'Top 5 Trends in Web Development for 2025',
+  //   excerpt: 'From AI-generated code to the rise of Web3, find out what skills you need to stay relevant in the tech industry.',
+  //   // Futuristic Tech/Code
+  //   imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
+  //   author: 'Sandeep K.',
+  //   date: new Date('2024-05-10').toDateString()
+  // },
+  // {
+  //   id: 2,
+  //   slug: 'psc-computer-tips',
+  //   title: 'How to Crack PSC Computer Assistant Exams',
+  //   excerpt: 'Essential tips and keyboard shortcuts to ace your upcoming Kerala PSC computer proficiency tests.',
+  //   // Studying/Notes
+  //   imageUrl: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+  //   author: 'Admin',
+  //   date: new Date('2024-04-22').toDateString()
+  // }
 ];
 
 /* ===========================
@@ -520,24 +520,24 @@ export const BLOG_POSTS: BlogPost[] = [
 =========================== */
 
 export const POSTERS = [
-  {
-    id: 1,
-    title: 'Summer Internship Drive',
-    // Vertical image: Modern office teamwork
-    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 2,
-    title: 'Admission Open: PGDCA',
-    // Vertical image: Students talking
-    imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 3,
-    title: 'Free Workshop on Python',
-    // Vertical image: Coding vertical
-    imageUrl: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=800&q=80'
-  }
+  // {
+  //   id: 1,
+  //   title: 'Summer Internship Drive',
+  //   // Vertical image: Modern office teamwork
+  //   imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'
+  // },
+  // {
+  //   id: 2,
+  //   title: 'Admission Open: PGDCA',
+  //   // Vertical image: Students talking
+  //   imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Free Workshop on Python',
+  //   // Vertical image: Coding vertical
+  //   imageUrl: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=800&q=80'
+  // }
 ];
 
 /* ===========================
@@ -545,7 +545,7 @@ export const POSTERS = [
 =========================== */
 
 export const REVIEWS = [
-  { id: 1, name: 'Rohit S.', rating: 5, comment: 'Excellent training and placement support. Highly recommend!' },
-  { id: 2, name: 'Fathima N.', rating: 4, comment: 'Good syllabus coverage for PGDCA. Lab facilities are great.' },
-  { id: 3, name: 'John D.', rating: 5, comment: 'Tally classes were very practical and helpful for my job.' }
+  // { id: 1, name: 'Rohit S.', rating: 5, comment: 'Excellent training and placement support. Highly recommend!' },
+  // { id: 2, name: 'Fathima N.', rating: 4, comment: 'Good syllabus coverage for PGDCA. Lab facilities are great.' },
+  // { id: 3, name: 'John D.', rating: 5, comment: 'Tally classes were very practical and helpful for my job.' }
 ];

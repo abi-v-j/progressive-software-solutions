@@ -9,8 +9,8 @@ const StudentWorks: React.FC = () => {
       <SEO
         title="Student Projects & Works | Progressive Software Solutions & Training"
         description="Explore real-world software projects and applications built by students of Progressive Software Solutions & Training across MERN, Python, Flutter, and Full Stack programs."
-        canonical="https://yourdomain.com/student-works"
-        ogImage="https://yourdomain.com/og-student-works.jpg"
+        canonical="https://www.progressivesst.com/student-works"
+        ogImage="https://www.progressivesst.com/og-student-works.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-white">

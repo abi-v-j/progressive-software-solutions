@@ -10,8 +10,8 @@ const Posters: React.FC = () => {
       <SEO
         title="Promotional Posters | Progressive Software Solutions & Training"
         description="Browse official promotional posters, course announcements, internship offers, and event creatives from Progressive Software Solutions & Training."
-        canonical="https://yourdomain.com/posters"
-        ogImage="https://yourdomain.com/og-posters.jpg"
+        canonical="https://www.progressivesst.com/posters"
+        ogImage="https://www.progressivesst.com/og-posters.jpg"
       />
 
       <div className="pt-16 sm:pt-20 mt-20 pb-14 sm:pb-16 bg-neutralLight min-h-screen">

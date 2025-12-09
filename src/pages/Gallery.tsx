@@ -17,8 +17,8 @@ const Gallery: React.FC = () => {
       <SEO
         title="Gallery | Progressive Software Solutions & Training Events & Students"
         description="Explore real photos from our software training sessions, tech events, internships, and student success stories at Progressive Software Solutions & Training."
-        canonical="https://yourdomain.com/gallery"
-        ogImage="https://yourdomain.com/og-gallery.jpg"
+        canonical="https://www.progressivesst.com/gallery"
+        ogImage="https://www.progressivesst.com/og-gallery.jpg"
       />
 
       <div className="pt-24 pb-20 bg-white min-h-screen">

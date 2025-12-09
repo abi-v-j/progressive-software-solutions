@@ -3,22 +3,19 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Code, Terminal, Database, Users } from 'lucide-react';
 import { Button, SectionTitle, Badge } from '../components/UI';
 import { COURSES, TESTIMONIALS } from '../constants';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { SEO } from "../components/SEO";
+import bg1 from '../assets/bg1.jpg';
+import bg2 from '../assets/bg2.jpg';
+import bg3 from '../assets/bg3.jpg';
+import bg4 from '../assets/bg4.jpg';
+import bg5 from '../assets/bg6.jpg';
+
+
 
 const Home: React.FC = () => {
-  const heroImages = [
-    'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
+  const heroImages = [bg1, bg2, bg3, bg4, bg5];
 
-
-
-
-
-  ];
 
   const [activeHero, setActiveHero] = React.useState(0);
 
@@ -38,8 +35,8 @@ const Home: React.FC = () => {
       <SEO
         title="Progressive Software Solutions & Training | Software Courses & Internships"
         description="Industry-ready software training, internships, and enterprise IT solutions."
-        canonical="https://yourdomain.com/"
-        ogImage="https://yourdomain.com/og-home.jpg"
+        canonical="https://www.progressivesst.com/"
+        ogImage="https://www.progressivesst.com/og-home.jpg"
       />
       {/* Hero Section */}
       <section className="relative bg-neutralDark pt-32 pb-20 overflow-hidden">
@@ -93,24 +90,60 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="hidden md:block relative"
             >
-              <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-white/10">
+              <div
+                className="relative h-[440px] rounded-2xl overflow-hidden shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] border border-white/10 perspective-[1200px]"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  const rotateX = ((y / rect.height) - 0.5) * -8;
+                  const rotateY = ((x / rect.width) - 0.5) * 8;
+                  e.currentTarget.style.setProperty("--rx", `${rotateX}deg`);
+                  e.currentTarget.style.setProperty("--ry", `${rotateY}deg`);
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.setProperty("--rx", `0deg`);
+                  e.currentTarget.style.setProperty("--ry", `0deg`);
+                }}
+              >
+<AnimatePresence>
                 <motion.img
-                  key={activeHero}
-                  src={heroImages[activeHero]}
-                  alt="Students Coding"
-                  className="w-full h-auto"
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{
-                    duration: 1,
-                    ease: 'easeInOut'
-                  }}
+  key={activeHero}
+  src={heroImages[activeHero]}
+  alt="Students Coding"
+  className="absolute inset-0 w-full h-full object-cover"
+  initial={{
+    opacity: 0,
+    scale: 1.05
+  }}
+  animate={{
+    opacity: 1,
+    scale: 1
+  }}
+  exit={{
+    opacity: 0,
+    scale: 0.98
+  }}
+  transition={{
+    duration: 0.6,
+    ease: "easeInOut"
+  }}
+/>
+
+                </AnimatePresence>
+
+                {/* Dynamic Light Reflection */}
+                <motion.div
+                  className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.25),transparent_60%)] pointer-events-none"
+                  animate={{ opacity: [0.15, 0.3, 0.15] }}
+                  transition={{ duration: 2, repeat: Infinity }}
                 />
 
-
-
+                {/* Cinematic Vignette */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/45 via-black/20 to-transparent pointer-events-none" />
               </div>
+
+
 
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl flex items-center gap-3">
                 <div className="bg-green-100 p-2 rounded-full text-green-600">

@@ -9,8 +9,8 @@ const Partners: React.FC = () => {
       <SEO
         title="Industry Partners | Progressive Software Solutions & Training"
         description="Progressive Software Solutions & Training collaborates with leading technology companies, startups, and academic institutions to deliver industry-aligned software education."
-        canonical="https://yourdomain.com/partners"
-        ogImage="https://yourdomain.com/og-partners.jpg"
+        canonical="https://www.progressivesst.com/partners"
+        ogImage="https://www.progressivesst.com/og-partners.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-white">

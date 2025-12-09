@@ -9,8 +9,8 @@ const Privacy: React.FC = () => {
       <SEO
         title="Privacy Policy | Progressive Software Solutions & Training"
         description="Read the Privacy Policy of Progressive Software Solutions & Training to understand how your personal data is collected, used, protected, and shared."
-        canonical="https://yourdomain.com/privacy"
-        ogImage="https://yourdomain.com/og-privacy.jpg"
+        canonical="https://www.progressivesst.com/privacy"
+        ogImage="https://www.progressivesst.com/og-privacy.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-white">

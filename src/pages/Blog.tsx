@@ -11,8 +11,8 @@ const Blog: React.FC = () => {
       <SEO
         title="Software Development Blog | Progressive Software Solutions & Training"
         description="Read the latest software development tutorials, industry insights, and technology trends from Progressive Software Solutions & Training."
-        canonical="https://yourdomain.com/blog"
-        ogImage="https://yourdomain.com/og-blog.jpg"
+        canonical="https://www.progressivesst.com/blog"
+        ogImage="https://www.progressivesst.com/og-blog.jpg"
       />
 
       <div className="pt-24 pb-20 bg-neutralLight min-h-screen">

@@ -37,11 +37,43 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="flex space-x-4">
-              <a className="text-gray-400 hover:text-white"><Facebook size={20} /></a>
-              <a className="text-gray-400 hover:text-white"><Twitter size={20} /></a>
-              <a className="text-gray-400 hover:text-white"><Linkedin size={20} /></a>
-              <a className="text-gray-400 hover:text-white"><Instagram size={20} /></a>
+              <a
+                href="https://www.facebook.com/share/1AYhyzaasZ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} />
+              </a>
+
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white pointer-events-none opacity-50"
+                aria-label="Twitter (not configured)"
+              >
+                <Twitter size={20} />
+              </a>
+
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white pointer-events-none opacity-50"
+                aria-label="LinkedIn (not configured)"
+              >
+                <Linkedin size={20} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/progressivesoftwaresolution?igsh=MWVmMGpjNGF6Y2Ez"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
             </div>
+
           </div>
 
           {/* Quick Links */}

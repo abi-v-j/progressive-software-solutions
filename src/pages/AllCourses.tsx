@@ -27,8 +27,8 @@ const AllCourses: React.FC = () => {
       <SEO
         title="Software Training Courses | Progressive Software Solutions & Training"
         description="Browse all professional software training courses including MERN, Python, Django, Flutter, Java, and full stack development with internships."
-        canonical="https://yourdomain.com/courses"
-        ogImage="https://yourdomain.com/og-courses.jpg"
+        canonical="https://www.progressivesst.com/courses"
+        ogImage="https://www.progressivesst.com/og-courses.jpg"
       />
 
       <div className="pt-24 pb-20 min-h-screen bg-neutralLight">
