@@ -109,7 +109,7 @@ export const Header: React.FC = () => {
 
             <div className="flex items-center justify-center text-gray-500 text-sm mt-2">
               <Phone size={16} className="mr-2" />
-              +1 (555) 123-4567
+              +91 9072 488 881
             </div>
           </div>
         </div>
