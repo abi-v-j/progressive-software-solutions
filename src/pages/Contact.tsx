@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                   <div className="flex items-start space-x-4">
                     <Mail className="text-accent mt-1" />
                     <div>
-                      <p className="font-semibold text-lg">progressiveofc.com</p>
+                      <p className="font-semibold text-lg">progressiveofc@gmail.com</p>
                       <p className="text-sm text-blue-200">Official Support</p>
                     </div>
                   </div>
