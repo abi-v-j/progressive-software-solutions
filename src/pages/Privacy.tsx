@@ -27,7 +27,7 @@ const Privacy: React.FC = () => {
 
         {/* Content */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-gray-700 leading-relaxed">
-          
+
           <section>
             <SectionTitle title="Overview" />
             <p>
@@ -57,6 +57,29 @@ const Privacy: React.FC = () => {
               <li>To comply with legal obligations</li>
             </ul>
           </section>
+          <section>
+            <SectionTitle title="User Communication Consent" />
+            <p>
+              By submitting forms on our website, you explicitly consent to receive communication from
+              Progressive Software Solutions & Training through RCS messages, WhatsApp, SMS, Email, and phone calls.
+            </p>
+
+            <p>
+              These communications may include service updates, course information, promotional offers,
+              event notifications, and transactional updates.
+            </p>
+
+            <p>
+              You understand and agree that this consent overrides any registration under the National Do
+              Not Disturb (DND) registry, where applicable.
+            </p>
+
+            <p>
+              You retain the right to withdraw your consent at any time by contacting us at
+              <strong> progressiveofc@gmail.com</strong>.
+            </p>
+          </section>
+
 
           <section>
             <SectionTitle title="Cookies & Tracking" />

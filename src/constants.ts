@@ -43,7 +43,7 @@ export const HEADER_LINKS = [
   // { label: 'Gallery', path: '/gallery' },
   { label: 'Careers', path: '/careers' },
   { label: 'Contact', path: '/contact' },
-  { label: 'Admin', path: '/admin/dashboard' }
+  // { label: 'Admin', path: '/admin/dashboard' }
 ];
 
 export const FOOTER_LINKS = {
