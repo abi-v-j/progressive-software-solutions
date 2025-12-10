@@ -287,7 +287,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white overflow-hidden">
+      {/* <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Student & Client Testimonials"
@@ -312,7 +312,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-brand text-white">
