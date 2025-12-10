@@ -104,8 +104,7 @@ const Contact: React.FC = () => {
                     <div>
                       <p className="font-semibold text-lg">Office Location</p>
                       <p className="text-sm text-blue-200">
-                        2nd Floor, RKV Arcade<br />
-                        Muvattupuzha, Kerala – 686661
+                        2nd Floor, RKV Arcade,<br/> Thodupuzha - Muvattupuzha Rd,<br/> near Ashramam Bus Stand<br/> PVT Stand, Kizhakkekara, <br/>Muvattupuzha, Kerala 686661
                       </p>
                     </div>
                   </div>

@@ -29,8 +29,6 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
     // ================= CONTENT =================
     { icon: BookOpen, label: "Blogs", path: "/admin/blog" },
     { icon: Layers, label: "Courses", path: "/admin/courses" },
-    { icon: Images, label: "Course Images", path: "/admin/course-images" },
-    { icon: Layers, label: "Course Sections", path: "/admin/course-sections" },
 
     // ================= MEDIA =================
     { icon: Image, label: "Gallery", path: "/admin/gallery" },

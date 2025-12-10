@@ -39,7 +39,7 @@ const Home: React.FC = () => {
         ogImage="https://www.progressivesst.com/og-home.jpg"
       />
       {/* Hero Section */}
-      <section className="relative bg-neutralDark pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-neutralDark pt-28 pb-28">
         <div className="absolute inset-0 opacity-10">
           <img
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
@@ -49,11 +49,13 @@ const Home: React.FC = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
+              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                 Building Industry-Ready  <span className="text-accent">Software Professionals</span>
               </h1>
@@ -81,7 +83,9 @@ const Home: React.FC = () => {
                 >
                   Start Consultation
                 </Button>
+                
               </div>
+              
             </motion.div>
 
             <motion.div
@@ -107,6 +111,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <AnimatePresence>
+                  
                   <motion.img
                     key={activeHero}
                     src={heroImages[activeHero]}
@@ -148,10 +153,37 @@ const Home: React.FC = () => {
             </motion.div>
           </div>
         </div>
+        
+        {/* Affiliations Strip */}
+      <div className="absolute bottom-[-56px] left-0 w-full z-40">
+  <div className="
+    max-w-6xl 
+    mx-auto 
+    bg-white 
+    rounded-2xl 
+    shadow-2xl 
+    px-8 
+    py-6 
+    flex 
+    flex-wrap 
+    items-center 
+    justify-center 
+    gap-10
+  ">
+            {/* Example Logos */}
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Google" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Microsoft" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="AWS" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Meta" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Startup India" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Startup India" />
+          </div>
+        </div>
+
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-28 py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Why Choose Progressive Software Solutions and Training?"
@@ -254,7 +286,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      {/* <section className="py-20 bg-white overflow-hidden">
+      <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Student & Client Testimonials"
@@ -279,7 +311,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-brand text-white">

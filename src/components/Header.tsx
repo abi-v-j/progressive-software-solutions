@@ -9,7 +9,7 @@ const Logo = () => (
   <img
     src="/logo.png"
     alt="EduPlatform Logo"
-    width={200}
+    width={230}
     height={40}
   />
 );
