@@ -1,4 +1,6 @@
-// src/auth/session.ts
-export const hasValidSession = () => {
-  return !!sessionStorage.getItem('admin_session');
+export const hasValidSession = (): boolean => {
+  const token = localStorage.getItem('admin_token');
+  const user = localStorage.getItem('admin_user');
+
+  return !!token && !!user;
 };

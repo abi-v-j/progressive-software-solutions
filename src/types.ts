@@ -123,3 +123,16 @@ export interface Poster {
   title: string;
   imageUrl: string;
 }
+
+
+
+export interface Admin {
+  admin_id: number;
+  admin_name: string;
+  admin_email: string;
+}
+
+export interface LoginResponse {
+  admin: Admin;
+  token: string;
+}

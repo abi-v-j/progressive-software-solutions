@@ -12,6 +12,9 @@ import bg4 from '../assets/bg4.jpg';
 import bg5 from '../assets/bg6.jpg';
 import PCPL from '../assets/PCPL.jpg';
 import WWRH from '../assets/WWRH.jpg';
+import Accelerate from '../assets/A4black.png';
+import DG8LY from '../assets/dg8lylogo.png';
+import Rutronix from '../assets/RutronixLogo.png';
 
 
 
@@ -41,7 +44,7 @@ const Home: React.FC = () => {
         ogImage="https://www.progressivesst.com/og-home.jpg"
       />
       {/* Hero Section */}
-      <section className="relative bg-neutralDark pt-28 pb-28">
+      <section className="relative bg-neutralDark pt-28 pb-6 md:pb-28">
         <div className="absolute inset-0 opacity-10">
           <img
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
@@ -155,36 +158,67 @@ const Home: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Affiliations Strip */}
-        {/* <div className="absolute bottom-[-56px] left-0 w-full z-40">
-          <div className="
-    max-w-6xl 
-    mx-auto 
-    bg-white 
-    rounded-2xl 
-    shadow-2xl 
-    px-8 
-    py-6 
-    flex 
-    flex-wrap 
-    items-center 
-    justify-center 
-    gap-10
-  ">
-            <img src={PCPL} className="h-16   rounded-2xl " alt="Google" />
-            <img src={WWRH} className="h-20   rounded-2xl " alt="Microsoft" />
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="AWS" />
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Meta" />
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Startup India" />
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" className="h-20 grayscale hover:grayscale-0 transition  rounded-2xl " alt="Startup India" />
+        <div className="relative md:absolute md:bottom-[-82px] left-0 w-full z-40 mt-6 md:mt-0">
+          <div
+            className="
+      max-w-6xl
+      mx-auto
+      bg-white
+      rounded-2xl
+      shadow-xl
+      px-4 sm:px-6 md:px-10
+      py-4 md:py-6
+    "
+          >
+            {/* Title */}
+            <div className="flex items-center justify-center mb-8">
+              <span className="h-px w-12 bg-gray-300"></span>
+              <h3 className="mx-4 text-sm font-semibold tracking-[0.2em] uppercase text-gray-700">
+                Our Affiliations
+              </h3>
+              <span className="h-px w-12 bg-gray-300"></span>
+            </div>
+
+
+            <div
+              className="
+        grid
+        grid-cols-2
+        sm:grid-cols-3
+        md:grid-cols-5
+        gap-y-6
+        gap-x-6
+        place-items-center
+      "
+            >
+              {[PCPL, WWRH, Accelerate, DG8LY, Rutronix].map((logo, index, arr) => (
+                <div
+                  key={index}
+                  className={`
+            w-28 sm:w-32 md:w-40
+            h-14 sm:h-16 md:h-20
+            flex items-center justify-center
+            opacity-90
+            ${index === arr.length - 1 ? 'col-span-2 sm:col-span-3 md:col-span-1 justify-self-center' : ''}
+          `}
+                >
+                  <img
+                    src={logo}
+                    alt="Affiliation Logo"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div> */}
+        </div>
+
 
       </section>
 
       {/* Features Section */}
-      <section className="pt-28 py-20 bg-white">
+      <section className="pt-16 md:pt-28 py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Why Choose Progressive Software Solutions and Training?"

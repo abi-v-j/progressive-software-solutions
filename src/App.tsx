@@ -31,7 +31,6 @@ const router = createHashRouter([
 ]);
 
 const App = () => {
-  sessionStorage.setItem('admin_session', 'progressive_admin_session_token');
   return (
     <>
       {/* ✅ GLOBAL DEFAULT SEO */}

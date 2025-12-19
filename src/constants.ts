@@ -550,3 +550,6 @@ export const REVIEWS = [
   // { id: 2, name: 'Fathima N.', rating: 4, comment: 'Good syllabus coverage for PGDCA. Lab facilities are great.' },
   // { id: 3, name: 'John D.', rating: 5, comment: 'Tally classes were very practical and helpful for my job.' }
 ];
+
+
+

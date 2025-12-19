@@ -1,98 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- ✅ BASIC META -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Progressive Software Solutions & Training</title>
 
-    <!-- ✅ PRIMARY SEO -->
-    <meta name="description" content="Industry-ready software training, internships, and enterprise IT solutions by Progressive Software Solutions & Training in Kerala." />
-    <link rel="canonical" href="https://www.progressivesst.com/" />
+<head>
+  <!-- ✅ BASIC META -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progressive Software Solutions & Training</title>
 
-    <!-- ✅ ROBOTS -->
-    <meta name="robots" content="index, follow" />
+  <!-- ✅ PRIMARY SEO -->
+  <meta name="description"
+    content="Industry-ready software training, internships, and enterprise IT solutions by Progressive Software Solutions & Training in Kerala." />
+  <link rel="canonical" href="https://www.progressivesst.com/" />
 
-    <!-- ✅ OPEN GRAPH -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Progressive Software Solutions & Training" />
-    <meta property="og:description" content="Enterprise-grade software training, academic projects, and internship programs." />
-    <meta property="og:image" content="https://www.progressivesst.com/og-home.jpg" />
-    <meta property="og:url" content="https://www.progressivesst.com/" />
+  <!-- ✅ ROBOTS -->
+  <meta name="robots" content="index, follow" />
 
-    <!-- ✅ TWITTER -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Progressive Software Solutions & Training" />
-    <meta name="twitter:description" content="Industry-ready software training, internships, and IT services." />
-    <meta name="twitter:image" content="https://www.progressivesst.com/og-home.jpg" />
+  <!-- ✅ OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Progressive Software Solutions & Training" />
+  <meta property="og:description"
+    content="Enterprise-grade software training, academic projects, and internship programs." />
+  <meta property="og:image" content="https://www.progressivesst.com/og-home.jpg" />
+  <meta property="og:url" content="https://www.progressivesst.com/" />
 
-    <!-- ✅ FAVICON -->
-    <link rel="icon" href="/favicon.ico" />
+  <!-- ✅ TWITTER -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Progressive Software Solutions & Training" />
+  <meta name="twitter:description" content="Industry-ready software training, internships, and IT services." />
+  <meta name="twitter:image" content="https://www.progressivesst.com/og-home.jpg" />
 
-    <!-- ✅ PRECONNECT FOR PERFORMANCE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- ✅ FAVICON -->
+  <link rel="icon" href="/favicon.ico" />
 
-    <!-- ✅ GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- ✅ PRECONNECT FOR PERFORMANCE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- ✅ TAILWIND (DEV ONLY — SHOULD BE REMOVED IN PROD BUILD) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ✅ GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <!-- ✅ TAILWIND THEME CONFIG -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: '#213F8A',
-              accent: '#E53935',
-              neutralDark: '#0B223F',
-              neutralLight: '#F7FAFC',
-              secondary: '#6B7280'
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            animation: {
-              'fade-in': 'fadeIn 0.5s ease-in-out',
-            },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              }
+  <!-- ✅ TAILWIND (DEV ONLY — SHOULD BE REMOVED IN PROD BUILD) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ TAILWIND THEME CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#213F8A',
+            accent: '#E53935',
+            neutralDark: '#0B223F',
+            neutralLight: '#F7FAFC',
+            secondary: '#6B7280'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
             }
           }
         }
       }
-    </script>
+    }
+  </script>
 
-    <!-- ✅ BASE STYLES -->
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #F7FAFC;
-        color: #0B223F;
-      }
+  <!-- ✅ BASE STYLES -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F7FAFC;
+      color: #0B223F;
+    }
 
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #213F8A;
-      }
-    </style>
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
-    <!-- ✅ IMPORT MAP (REACT 19 SAFE) -->
-    <script type="importmap">
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #213F8A;
+    }
+
+    /* global.css */
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <!-- ✅ IMPORT MAP (REACT 19 SAFE) -->
+  <script type="importmap">
       {
         "imports": {
           "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -105,14 +122,15 @@
       }
     </script>
 
-    <!-- ✅ APP CSS -->
-    <link rel="stylesheet" href="/index.css" />
-  </head>
+  <!-- ✅ APP CSS -->
+  <link rel="stylesheet" href="/index.css" />
+</head>
 
-  <body>
-    <div id="root"></div>
+<body>
+  <div id="root"></div>
 
-    <!-- ✅ APP ENTRY -->
-    <script type="module" src="/src/index.tsx"></script>
-  </body>
+  <!-- ✅ APP ENTRY -->
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+
 </html>
